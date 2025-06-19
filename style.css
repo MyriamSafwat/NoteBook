@@ -1,0 +1,205 @@
+*{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: large;
+    font-weight: bolder;
+    box-sizing: border-box;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+}
+:root{
+    --mainColor: #0d1117;
+    --secColor: #e7e7e7;
+    --cardColor: #3c3c3c;
+    --lineColor :#e7e7e723;
+    --overColor:#0000008f;
+}
+body{
+    background-color: var(--mainColor);
+    color: var(--secColor);
+}
+
+.app{
+    padding: 20px;
+}
+.app header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.app header i{
+    padding: 10px;
+    margin: 10px;
+    font-size: xx-large;
+}
+
+.add{
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    margin: 5px auto;
+    background-color: var(--cardColor);
+    border-radius: 5px;
+}
+
+.add i{
+    font-size: larger;
+    padding: 7px;
+    margin: 5px 5px 15px 5px;
+    background-color: var(--mainColor);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    cursor: pointer;
+}
+
+.cardstyle {
+    width: 85%;
+    padding: 20px;
+    margin: 10px auto;
+    background-color: var(--cardColor);
+    border-radius: 5px;
+    height: auto;
+    align-self: auto;
+}
+
+.cardCon{
+    font-size: large;
+    font-weight: bold;
+}
+.cardDet{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 10px 0px;
+    border-top: solid 1px var(--lineColor);
+    margin: 10px 0px;
+}
+.cardDet i {
+    font-size: large;
+    cursor: pointer;
+}
+.menuApp{
+    position: relative;
+}
+.menuApp .menu{
+    position: absolute;
+    width: 100px;
+    padding: 10px 5px;
+    background-color: #1e1e20;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    top: auto;
+    right: auto;
+    z-index: 6;
+    scale: 0;
+}
+
+.menuApp:hover .menu{
+    scale: 1;
+}
+
+li{
+    list-style: none;
+    padding: 5px 5px;
+}
+li:hover{
+    background-color: var(--lineColor);
+}
+
+.popApp{
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background-color: var(--overColor);
+    place-items: center;
+    display: none;
+    visibility: hidden;
+}
+.open{
+    visibility: visible;
+    display: grid;
+}
+
+.popApp .pop{
+    background-color: rgb(32, 32, 32);
+    width: 60%;
+    padding: 15px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.pop .headerpop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0px;
+    margin: 5px 0px;
+    font-size: larger;
+}
+
+.headerpop i{
+    cursor: pointer;
+    font-size: x-large;
+}
+form{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+form > div :where(input , textarea){
+    width: 100%;
+    outline-width: 0;
+    display: block;
+    padding: 10px;
+    background-color: inherit;
+    margin: 5px 0px;
+    border: #313131 2px solid;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    color: var(--secColor);
+}
+
+textarea{
+    resize: none;
+    height: 150px;
+    overflow-x: auto;
+}
+
+form button{
+    width: 100%;
+    padding: 7px;
+    font-size: large;
+    font-weight: bold;
+    background-color: var(--cardColor);
+    border-radius: 5px;
+    border: none;
+    color: var(--secColor);
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
